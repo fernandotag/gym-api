@@ -1,8 +1,8 @@
 import { verifyJwt } from '@/http/middlewares/verify-jwt'
 import { FastifyInstance } from 'fastify'
 import { create } from './create'
-import { search } from './gyms'
 import { nearby } from './nearby'
+import { search } from './search'
 
 export async function gymsRoutes(app: FastifyInstance) {
   app.addHook('onRequest', verifyJwt)
